@@ -5,7 +5,7 @@
   },
   "waitFor": "onCreateCommand",
   "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
+  "postCreateCommand": "/bin/bash .devcontainer/post-create.sh",
   "customizations": {
     "codespaces": {
       "openFiles": []
