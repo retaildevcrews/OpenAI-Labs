@@ -11,6 +11,9 @@
       "openFiles": []
     },
     "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux":"zsh"
+      },
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python"
