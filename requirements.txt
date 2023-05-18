@@ -5,3 +5,7 @@ pandas==1.5.3
 torch==1.12.1
 torchvision==0.13.1
 tqdm==4.64.0
+jsonpointer==2.3
+jsonschema==4.17.3
+openai==0.27.2 
+tiktoken==0.3.1
