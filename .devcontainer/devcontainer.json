@@ -16,7 +16,10 @@
       },
       "extensions": [
         "ms-toolsai.jupyter",
-        "ms-python.python"
+        "ms-toolsai.jupyter-keymap",
+        "ms-python.python",
+        "pomdtr.excalidraw-editor",
+        "oderwat.indent-rainbow"
       ]
     }
   }
