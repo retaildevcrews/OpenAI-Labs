@@ -2,11 +2,9 @@
 apt-get update
 apt-get install -y \
   curl \
-  git \
   gnupg2 \
   jq \
-  sudo \
-  zsh
+  sudo
 
 ## add bits needed for GitHub CLI
 apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
