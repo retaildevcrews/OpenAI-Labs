@@ -12,8 +12,13 @@ Apply for access to Azure OpenAI: (https://aka.ms/oaiapply)
   Currently, access to this service is granted only by application. You can apply for access to Azure OpenAI by completing the form at <https://aka.ms/oai/access>. 
 - An Azure OpenAI resource
   For more information about creating a resource, see [Create a resource and deploy a model using Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).
-- Create .env file with your OpenAI API key, this will be used in the labs to set up the key for the jupyter notebooks
+
+## Configure environment
+Create .env file with your OpenAI API key, this will be used in the labs to set up the key for the jupyter notebooks
   
-  ```bash
-  echo "OPENAI_API_KEY='<your api key goes here'" > .env
-  ```
+```bash
+echo "OPENAI_API_KEY='<OpenAI key goes here>'
+CHATGPT_MODEL='<model name goes here>'
+OPENAI_API_BASE='<service url goes here>'
+OPENAI_API_VERSION='<api version goes here>'" > .env
+```
