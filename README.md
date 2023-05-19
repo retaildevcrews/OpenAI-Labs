@@ -23,3 +23,15 @@ CHATGPT_MODEL='<model name goes here>'
 OPENAI_API_BASE='<service url goes here>'
 OPENAI_API_VERSION='<api version goes here>'" > .env
 ```
+
+## Run Jupyter Notebook
+
+Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.
+
+```bash
+#run this command from terminal
+jupyter notebook
+```
+
+Instructions on how to access newly started Jupyter instance will show up in the terminal, you can also see more details here:
+<https://docs.jupyter.org/en/latest/running.html>
