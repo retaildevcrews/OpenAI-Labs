@@ -14,6 +14,7 @@ Apply for access to Azure OpenAI: (https://aka.ms/oaiapply)
   For more information about creating a resource, see [Create a resource and deploy a model using Azure OpenAI](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/create-resource).
 
 ## Configure environment
+
 Create .env file with your OpenAI API key, this will be used in the labs to set up the key for the jupyter notebooks
   
 ```bash
