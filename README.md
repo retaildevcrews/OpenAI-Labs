@@ -2,7 +2,7 @@
 
 ## Goals
 
-Provide a set of exercises to familiarize user with Azure OpenAI Service.
+Provide a set of exercises to familiarize user with Azure OpenAI Service.  Repository includes setup for a dev container which is configured to execute all necessary OpenAI exerices.  
 
 ## Prerequisites
 
