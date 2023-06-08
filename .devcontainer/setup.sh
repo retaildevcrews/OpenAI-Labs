@@ -7,3 +7,8 @@ sudo cp -R /root/.oh-my-zsh /home/$USERNAME
 sudo cp /root/.zshrc /home/$USERNAME
 sudo sed -i -e "s/\/root\/.oh-my-zsh/\/home\/$USERNAME\/.oh-my-zsh/g" /home/$USERNAME/.zshrc
 sudo chown -R $USER_UID:$USER_GID /home/$USERNAME/.oh-my-zsh /home/$USERNAME/.zshrc
+
+
+nbstripout --install
+nbstripout --install --attributes .gitattributes
+nbstripout --install --global
