@@ -1,11 +1,11 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "hostRequirements": {
-    "cpus": 4
+  "build": {
+    // Path is relataive to the devcontainer.json file.
+    "dockerfile": "Dockerfile"
   },
-  "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
+  "waitFor": "updateContentCommand",
+  "updateContentCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "/bin/bash .devcontainer/setup.sh",
   "customizations": {
     "codespaces": {
       "openFiles": []
