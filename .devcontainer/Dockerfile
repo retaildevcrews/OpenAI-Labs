@@ -25,7 +25,3 @@ RUN groupadd --gid $USER_GID $USERNAME \
 # [Optional] Set the default user. Omit if you want to keep the default as root.
 USER $USERNAME
 ENV PATH="/home/$USERNAME/.local/bin:$PATH"
-COPY requirements.txt /tmp/pip-tmp/
-
-RUN pip install -r /tmp/pip-tmp/requirements.txt
-RUN bash ./setup.sh 

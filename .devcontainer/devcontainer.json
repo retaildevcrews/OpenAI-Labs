@@ -4,6 +4,8 @@
     "dockerfile": "Dockerfile"
   },
   "waitFor": "updateContentCommand",
+  "updateContentCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "/bin/bash .devcontainer/setup.sh",
   "customizations": {
     "codespaces": {
       "openFiles": []
