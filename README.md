@@ -24,7 +24,8 @@ OPENAI_API_BASE='<service url goes here>'
 OPENAI_API_VERSION='<api version goes here>'" > .env
 ```
 > **Note**
-> These values can be found in the Azure Portal by navigating to your Azure OpenAI resource
+> Information regarding the different supported API versions can be found here: (https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference)
+> These user specific values can be found in the Azure Portal by navigating to your Azure OpenAI resource
 > ![Image](images/openai-settings.jpeg)
 
 ## Run Jupyter Notebook
