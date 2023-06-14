@@ -29,7 +29,7 @@ OPENAI_API_VERSION='<api version goes here>'" > .env
 
 ## Run Jupyter Notebook
 
-Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.
+Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.  **NOTE** When Jupyter notebook starts up you will see a link in the terminal that contains the token needed to use the notebook, use that link to access the notebook.
 
 ```bash
 #run this command from terminal
