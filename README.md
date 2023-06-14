@@ -15,7 +15,7 @@ Apply for access to Azure OpenAI: <https://aka.ms/oaiapply>
 
 ## Configure environment
 
-Create .env file with your OpenAI API key, this will be used in the labs to set up the key for the jupyter notebooks
+Create .env file with your OpenAI API key, model to be used, api URL, and API version, this will be used in the labs to set up the key for the jupyter notebooks - they use dotenv to load secrets and user specific settings.
   
 ```bash
 echo "OPENAI_API_KEY='<OpenAI key goes here>'
@@ -23,6 +23,9 @@ CHATGPT_MODEL='<model name goes here>'
 OPENAI_API_BASE='<service url goes here>'
 OPENAI_API_VERSION='<api version goes here>'" > .env
 ```
+> **Note**
+> These values can be found in the Azure Portal by navigating to your Azure OpenAI resource
+> ![Image](images/openai-settings.jpeg)
 
 ## Run Jupyter Notebook
 
