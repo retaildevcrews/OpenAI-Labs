@@ -15,7 +15,7 @@ Apply for access to Azure OpenAI: <https://aka.ms/oaiapply>
 
 ## Configure environment
 
-Create .env file with your OpenAI API key, this will be used in the labs to set up the key for the jupyter notebooks
+Create .env file with your OpenAI API key, model to be used, api URL, and API version, this will be used in the labs to set up the key for the jupyter notebooks - they use dotenv to load secrets and user specific settings.
   
 ```bash
 echo "OPENAI_API_KEY='<OpenAI key goes here>'
@@ -23,10 +23,16 @@ CHATGPT_MODEL='<model name goes here>'
 OPENAI_API_BASE='<service url goes here>'
 OPENAI_API_VERSION='<api version goes here>'" > .env
 ```
+> **Note**
+> Information regarding the different supported API versions can be found here: (https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference)
+> These user specific values can be found in the Azure Portal by navigating to your Azure OpenAI resource
+> ![Image](images/openai-settings.jpeg)
 
 ## Run Jupyter Notebook
 
-Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.
+Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.  > 
+
+> **NOTE:** When Jupyter notebook starts up you will see a link in the terminal that contains the token needed to use the notebook, use that link to access the notebook.
 
 ```bash
 #run this command from terminal
