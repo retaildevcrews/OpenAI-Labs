@@ -41,3 +41,9 @@ jupyter notebook
 
 Instructions on how to access newly started Jupyter instance will show up in the terminal, you can also see more details here:
 <https://docs.jupyter.org/en/latest/running.html>
+
+## Navigate to Labs
+
+After opening notebook in browser, navigate to labs directory. This directory will contain a set of directories for different API examples, ipynb files will be found within these directories, each ipynb file can be used as a playground to try different things using the azure openai api's: 
+
+![Image](images/jupyter-notebook-first-screen.png)
