@@ -23,14 +23,15 @@ CHATGPT_MODEL='<model name goes here>'
 OPENAI_API_BASE='<service url goes here>'
 OPENAI_API_VERSION='<api version goes here>'" > .env
 ```
+
 > **Note**
-> Information regarding the different supported API versions can be found here: (https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference)
+> Information regarding the different supported API versions can be found here: <https://learn.microsoft.com/en-us/azure/cognitive-services/openai/reference>
 > These user specific values can be found in the Azure Portal by navigating to your Azure OpenAI resource
 > ![Image](images/openai-settings.jpeg)
 
 ## Run Jupyter Notebook
 
-Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.  > 
+Running jupyter notebook from a terminal at the top level directory for this repository will start a jupyter server and allow you to interact with any notebooks in the repository.
 
 > **NOTE:** When Jupyter notebook starts up you will see a link in the terminal that contains the token needed to use the notebook, use that link to access the notebook.
 
@@ -44,6 +45,6 @@ Instructions on how to access newly started Jupyter instance will show up in the
 
 ## Navigate to Labs
 
-After opening notebook in browser, navigate to labs directory. This directory will contain a set of directories for different API examples, ipynb files will be found within these directories, each ipynb file can be used as a playground to try different things using the azure openai api's: 
+After opening notebook in browser, navigate to labs directory. This directory will contain a set of directories for different API examples, ipynb files will be found within these directories, each ipynb file can be used as a playground to try different things using the azure openai api's:
 
 ![Image](images/jupyter-notebook-first-screen.png)
