@@ -1,0 +1,34 @@
+experimentation:
+  data:
+    file_path: "./data/nl2sql_dataset.jsonl"
+  reader:
+    name: "components.readers.jsonl"
+  writers:
+    - name: "components.writers.jsonl"
+      args:
+        output_path: "outputs/nl2sql_experiment_results.jsonl"
+
+project_root: "../../" # relative to notebook/command line execution
+
+id: "nl2ql-ffmodel-320zyxw3528"
+description: "Basic NL2SQL solution to take NL prompts and generate SQL queries to address these prompts."
+    
+components:
+  - name: "components.pre_processors.static_context"
+    args:
+      static_context: "This SQL Server database contains data on customers that we would like to query."
+
+  - name: "components.stitchers.sql"
+    args: {}
+
+  - name: "components.model_callers.openai"
+    args:
+      engine: "text-davinci-003"
+      stop: ["--", "/*"]
+      temperature: 0.0
+
+  - name: "components.post_processors.first_completion"
+    args: {}
+
+  - name: "components.evaluators.sql_syntax"
+    args: {}

@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  inference:
+    build:
+      context: ../../ # Use the project root as our build context
+      dockerfile: examples/docker/Dockerfile # Relative to build context
+      secrets:
+        - ffmodel # Include our FFModel repository secrets during build
+    image: inference # Tag our image as 'inference'
+    environment: # Set our FFModel config paths
+      SOLUTION_CONFIG_PATH: nl2python_solution.yaml
+      ENVIRONMENT_CONFIG_PATH: /.ffmodel
+    ports:
+      - "8080:8080" # Expose our web endpoint
+    volumes:
+      - .ffmodel:/.ffmodel:ro # Mount our environment config
+secrets:
+  ffmodel: # Used to authenticate to the FFModel repo and install it
+    file: ./.env

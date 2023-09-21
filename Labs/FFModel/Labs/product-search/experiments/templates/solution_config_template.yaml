@@ -1,0 +1,40 @@
+# The experimentation-specific configs for the solution.
+# Will be referenced whenever an experiment is triggered with this solution.
+experimentation:
+  data:
+    file_path:
+  reader:
+    name: "<<reader.component.module.path>>"
+  writers:
+    - name: "<<writer.component.module.path>>"
+      args:
+        output_path: "<<output_path>>"
+
+# The inference-specific configs for the solution.
+# Will be referenced whenever a solution is configured for inference.
+inference:
+  reader:
+    name: "<<reader.component.module.path>>"
+  writers:
+    - name: "<<writer.component.module.path>>"
+      args:
+        output_path: "<<output_path>>"
+
+# High-level solution-specific information
+id: "<<solution_id>>"
+description: "<<solution_description>>"
+
+# Any solution-specific environment configs to override the default environment
+# configs provided at execute time as your environment config path.
+environment_config_overrides:
+  AML_ENVIRONMENT_NAME: ffmodel
+
+# The root of the project where the solution code lives
+project_root: "../../" # relative to notebook/command line execution
+
+# The components that make up the solution.
+# Will be referenced in both experimentation and inference execution modes.
+components:
+  - name: "<<solution.component.module.path>>"
+    args: {}
+    supporting_data: {}

@@ -1,0 +1,4 @@
+clean_record_id,nl_prompt,completion,cleaned_by,cleaned_time,tags,labels,session_id,sequence
+00000000-0000-0000-0000-000000000001,What are the top 10 products sold by category?,"Sales | summarize sum(Quantity) by Product, Category | top 10 by sum_Quantity",cleaning,2022-11-01T10:56:03.6472747,"nl2kql,minimal_data","pandas,dataframe,csv",00000000-0000-0000-0000-000000000011,1
+00000000-0000-0000-0000-000000000002,What is the average response time?,.avg(responseTime) | where timestamp > ago(1h),cleaning,2022-11-01T10:56:03.6472747,"nl2kql,minimal_data","pandas,dataframe,csv",00000000-0000-0000-0000-000000000012,1
+00000000-0000-0000-0000-000000000003,What is the total number of requests by country?,.count | summarize count() by country | where timestamp > ago(1h),cleaning,2022-11-01T10:56:03.6472747,"nl2kql,minimal_data","pandas,dataframe,csv",00000000-0000-0000-0000-000000000013,1
