@@ -1,6 +1,6 @@
 # FFModel Labs
 
-## Prereuisites
+## Prerequisites
 
 > **Note**
 > In order to executed this lab, user must be familiar with Python and have the ability to configure Python environment.  It is recommende to use a virtual environment leveraging something like Conda or venv.
