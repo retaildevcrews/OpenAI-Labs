@@ -1,0 +1,16 @@
+{
+  "Name": "FFModel Experiment Compute",
+  "IsCustom": true,
+  "Description": "Can perform actions on an Azure Machine Learning workspace resources that are allowed for FFModel experiments.",
+  "Actions": [
+    "Microsoft.MachineLearningServices/workspaces/data/versions/write",
+    "Microsoft.MachineLearningServices/workspaces/datasets/registered/read",
+    "Microsoft.MachineLearningServices/workspaces/datasets/registered/write",
+    "Microsoft.MachineLearningServices/workspaces/datastores/listSecrets/action",
+    "Microsoft.MachineLearningServices/workspaces/datastores/read"
+  ],
+  "NotActions": [],
+  "AssignableScopes": [
+    "/subscriptions/<your-subscription-id>/resourceGroups/<your-resource-group>"
+  ]
+}

@@ -1,0 +1,6 @@
+{"user_nl":"print 'hello world' to the console","expected_output":"print('hello world')"}
+{"user_nl":"print 'how are you?' to the console","expected_output":"print('how are you?')"}
+{"user_nl":"print 'goodbye' to the console","expected_output":"print('goodbye')"}
+{"user_nl":"add two and two together","expected_output":"sum = 2 + 2"}
+{"user_nl":"subtract 5 from ten","expected_output":"result = 10 - 5"}
+{"user_nl":"multiply 6 by six","expected_output":"product = 6 * 6"}

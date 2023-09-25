@@ -1,0 +1,62 @@
+experimentation:
+  data:
+    file_path: "./sample_datasets/nl2python_dataset.jsonl"
+  reader:
+    name: "components.readers.jsonl"
+  writers:
+    - name: "components.writers.jsonl"
+      args:
+        output_path: "outputs/nl2python_experiment_results.jsonl"
+        
+inference:
+  reader:
+    name: "components.readers.jsonl"
+
+environment_config_overrides:
+  AML_ENVIRONMENT_NAME: ffmodel
+
+project_root: "../../"  # relative to notebook/command line execution
+
+id: "nl2python-ffmodel-320kjkalij"
+description: "Basic NL2Python solution to take NL prompts and generate Python code to address these prompts."
+
+components:
+  - name: "components.pre_processors.static_context"
+    args:
+      static_context: "The following file contains prompts (comments) and the corresponding python code answering these prompts"
+
+  - name: "components.pre_processors.few_shot_embedding"
+    args:
+      count: 3
+      reverse: True
+    supporting_data:
+      few_shot_file:
+        file_path: "./sample_datasets/nl2python_fewshot_dataset_text-embedding-ada-002.pkl"
+
+  - name: "components.pre_processors.session_selector"
+    args:
+      count: 3
+
+  - name: "components.stitchers.generic"
+
+  - name: "components.model_callers.openai"
+    args:
+      engine: "text-davinci-003"
+      stop:
+        - "#"
+      temperature: 0.0
+      max_tokens: 256
+      top_p: 1.0
+      best_of: 1
+
+  - name: "components.post_processors.first_completion"
+
+  - name: "components.evaluators.fuzzy"
+    args:
+      ratio_methods: ["simple", "partial", "token_sort", "token_set"]
+
+  - name: "components.evaluators.rouge"
+    args:
+      modes: ["rouge1", "rougeL"]
+
+  - name: "components.evaluators.exact_match"
