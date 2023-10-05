@@ -1,0 +1,38 @@
+experimentation:
+  data:
+    file_path: "./data/sample_dataset.jsonl"
+  reader:
+    name: "components.readers.jsonl"
+  writers:
+    - name: "components.writers.jsonl"
+      args:
+        output_path: "outputs/01_baseline.jsonl"
+
+inference:
+  reader:
+    name: "components.readers.jsonl"
+  writers:
+    - name: "components.writers.jsonl"
+      args:
+        output_path: "outputs/01_baseline.jsonl"
+
+id: "01_baseline"
+description: "Baseline solution for the shopping assistant"
+project_root: "../" # relative to notebook/command line execution
+
+components:
+  - name: "components.pre_processors.static_context_from_file"
+    supporting_data:
+      static_context_file:
+        file_path: "static_contexts/01_static_context.txt"
+  
+  - name: "components.stitchers.openai_chat_completions"
+
+  - name: "components.model_callers.openai_chat_completions"
+    args:
+      engine: "gpt-35-turbo"
+      stop: []
+      max_tokens: 500
+      temperature: 0
+
+  - name: "components.evaluators.semantic_similarity"

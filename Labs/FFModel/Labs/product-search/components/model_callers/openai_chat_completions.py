@@ -64,7 +64,7 @@ class Component(BaseSolutionComponent[InferenceDataModel[InferenceRequest, Model
 
         It will raise a ValueError if the prompt is not set
         """
-
+        print("yoyoyo:" + str(self.args))
         initialize_openai(self.openai_config)
 
         if not data_model.model_input.prompt:
