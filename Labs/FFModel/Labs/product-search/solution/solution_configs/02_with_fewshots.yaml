@@ -6,7 +6,7 @@ experimentation:
   writers:
     - name: "components.writers.jsonl"
       args:
-        output_path: "outputs/experiments/01_baseline.jsonl"
+        output_path: "outputs/experiments/02_fewshots.jsonl"
 
 inference:
   reader:
@@ -14,7 +14,7 @@ inference:
   writers:
     - name: "components.writers.jsonl"
       args:
-        output_path: "outputs/inference/01_baseline.jsonl"
+        output_path: "outputs/inference/02_fewshots.jsonl"
 
 id: "01_baseline"
 description: "Baseline solution for the shopping assistant"
@@ -25,6 +25,11 @@ components:
     supporting_data:
       static_context_file:
         file_path: "static_contexts/01_static_context.txt"
+
+  - name: "components.pre_processors.few_shots_from_file"
+    supporting_data:
+      few_shot_file:
+        file_path: "few_shot_pairs/00_few_shots.json"
   
   - name: "components.stitchers.openai_chat_completions"
 
@@ -34,5 +39,10 @@ components:
       stop: []
       max_tokens: 500
       temperature: 0
+  - name: components.evaluators.json_syntax
+    args:
+      expected_keys:
+      - products
+    supporting_data: {}
 
   - name: "components.evaluators.semantic_similarity"

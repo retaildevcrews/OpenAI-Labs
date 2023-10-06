@@ -1,0 +1,46 @@
+[   
+{ "user_nl":"I am starting a new tech job, what tools do I need",   
+  "expected_output":{
+    "products": [
+      {
+        "product_name": "Laptop",
+        "quantity": 2
+      },
+      {
+        "product_name": "Mouse",
+        "quantity": 4
+      },
+      {
+        "product_name": "Keyboard",
+        "quantity": 3
+      }
+    ]
+  }
+},
+{ "user_nl":"What do I need to buy for my trip to the beach",   
+  "expected_output":
+  {
+    "products": [
+      {
+        "product_name": "Beachball",
+        "quantity": 1
+      },
+      {
+        "product_name": "towel",
+        "quantity": 1
+      }
+    ]
+  }
+},
+{ "user_nl":"Gonna go to a soccer tournament, its gonnna be hot, what do I need in order to stay hydrated?",   
+  "expected_output":
+  {
+    "products": [
+      {
+        "product_name": "Bottled Water",
+        "quantity": 6
+      }
+    ]
+  }
+}
+]

@@ -6,7 +6,7 @@ experimentation:
   writers:
     - name: "components.writers.jsonl"
       args:
-        output_path: "outputs/experiments/01_baseline.jsonl"
+        output_path: "outputs/experiments/03_baseline.jsonl"
 
 inference:
   reader:
@@ -14,7 +14,7 @@ inference:
   writers:
     - name: "components.writers.jsonl"
       args:
-        output_path: "outputs/inference/01_baseline.jsonl"
+        output_path: "outputs/inference/03_baseline.jsonl"
 
 id: "01_baseline"
 description: "Baseline solution for the shopping assistant"
@@ -24,7 +24,7 @@ components:
   - name: "components.pre_processors.static_context_from_file"
     supporting_data:
       static_context_file:
-        file_path: "static_contexts/01_static_context.txt"
+        file_path: "static_contexts/02_static_context.txt"
   
   - name: "components.stitchers.openai_chat_completions"
 
