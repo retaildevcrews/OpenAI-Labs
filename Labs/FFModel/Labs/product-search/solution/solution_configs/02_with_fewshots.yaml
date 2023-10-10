@@ -39,10 +39,30 @@ components:
       stop: []
       max_tokens: 500
       temperature: 0
-  - name: components.evaluators.json_syntax
+  - name: components.evaluators.json_schema
     args:
-      expected_keys:
-      - products
-    supporting_data: {}
+      schema: {
+                "type": "object",
+                "properties": {
+                    "products": {
+                    "type": "array",
+                        "items": 
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "product_name": {
+                                    "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "product_name"
+                                ]
+                            },
+                    }
+                },
+                "required": [
+                    "products"
+                ]
+            }
 
   - name: "components.evaluators.semantic_similarity"
