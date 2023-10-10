@@ -35,7 +35,7 @@ class Component(BaseSolutionComponent[ExperimentDataModel]):
     """
 
     def _post_init(self):
-        # Sets defaults for other values
+        # loads the json schema to validate response against
         self.schema = self.args.get("schema")
 
     def execute(self, data_model: ExperimentDataModel) -> ExperimentDataModel:
