@@ -1,0 +1,5 @@
+openai
+tenacity
+azure-search-documents
+python-dotenv
+pdfminer.six
