@@ -1,0 +1,6 @@
+azure-storage-blob
+azure-search-documents==11.4.0b11
+openai
+tenacity
+python-dotenv
+pdfminer.six
