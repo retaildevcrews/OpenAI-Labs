@@ -4,3 +4,4 @@ openai
 tenacity
 python-dotenv
 pdfminer.six
+langchain
