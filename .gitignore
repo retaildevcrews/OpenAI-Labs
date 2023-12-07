@@ -4,3 +4,4 @@ notebooks/cifar_net.pth
 .env
 .gitattributes
 venv
+.cache

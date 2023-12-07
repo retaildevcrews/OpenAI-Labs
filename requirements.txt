@@ -12,3 +12,4 @@ tiktoken
 langchain
 python-dotenv
 nbstripout
+pyautogen
